@@ -1,13 +1,13 @@
 import Header from "@/components/Header/Header";
-import Home from "@/components/Home/Home";
+import Product from "@/components/Product/Product";
 import React from "react";
 
 const page = () => {
   return (
-    <div>
+    <>
       <Header />
-      <Home />
-    </div>
+      <Product />
+    </>
   );
 };
 

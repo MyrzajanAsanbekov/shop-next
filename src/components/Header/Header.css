@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 330px;
+  background: black;
+  height: 100px;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+.header h1 {
+  color: white;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.header-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-btn button {
+  width: 120px;
+  height: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  background: none;
+  color: white;
+  border: 1px solid white;
+}
+
+.header-btn button:hover {
+  background: white;
+  color: black;
+}
