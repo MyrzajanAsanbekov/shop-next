@@ -1,9 +1,20 @@
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+#header.scrolled {
+  background-color: rgba(40, 39, 39, 0.9);
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 330px;
-  background: black;
+  gap: 200px;
   height: 100px;
 }
 .header-nav {
@@ -25,22 +36,87 @@
 .header-btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 
-.header-btn button {
+.header-btn a {
   width: 120px;
   height: 30px;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
   background: none;
   color: white;
   border: 1px solid white;
+  text-decoration: none;
+  text-align: center;
 }
 
-.header-btn button:hover {
+.header-btn a:hover {
   background: white;
   color: black;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.user-info img {
+  width: 50px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.user-info h5 {
+  color: white;
+}
+
+.img-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal {
+  position: absolute;
+  top: 70px;
+  right: 120px;
+  background-color: #1f2833;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.img-btn {
+  display: flex;
+  align-items: center;
+  color: #c5c6c7;
+}
+
+.user-email h5 {
+  margin: 5px 0px;
+  color: #c5c6c7;
+  font-size: 0.9rem;
+}
+
+.user-email p {
+  color: #c5c6c7;
+  font-size: 0.9rem;
+  font-weight: 100;
 }

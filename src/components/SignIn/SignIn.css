@@ -1,0 +1,26 @@
+.signin-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 150px;
+  gap: 30px;
+}
+
+.signin-google h1 {
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.signin-google button {
+  width: 240px;
+  height: 50px;
+  font-size: 20px;
+  background: none;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
