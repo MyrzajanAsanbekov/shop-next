@@ -1,43 +1,20 @@
-"use client";
 import Header from "@/components/Header/Header";
-import ProductCard from "@/components/ProductCard/ProductCard";
-import axios from "axios";
-import { useEffect, useState } from "react";
+import ProductList from "@/components/ProductCard/ProductList";
+import React from "react";
 
-const Page = () => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+const products = [
+  { id: 1, title: "Product 1", price: 10 },
+  { id: 2, title: "Product 2", price: 20 },
+  { id: 3, title: "Product 3", price: 30 },
+];
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get("https://fakestoreapi.com/products");
-        setProducts(response.data);
-        setLoading(false);
-      } catch (error) {
-        console.error("Product fetch error:", error);
-        setLoading(false);
-      }
-    };
-
-    fetchProducts();
-  }, []);
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
+const ProductPage = () => {
   return (
-    <>
+    <div>
       <Header />
-      <div className="container">
-        <div className="product-list">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-      </div>
-    </>
+      <ProductList products={products} />
+    </div>
   );
 };
 
-export default Page;
+export default ProductPage;

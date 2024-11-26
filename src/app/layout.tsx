@@ -2,6 +2,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { SessionProvider } from "next-auth/react";
+import { Provider } from "react-redux";
+import store from "@/redux/store";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -22,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <SessionProvider>{children}</SessionProvider>
+        <Provider store={store}>
+          <SessionProvider>{children}</SessionProvider>
+        </Provider>
       </body>
     </html>
   );
